@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/hzx/ROS_WS/mangdang_ws/devel/lib/python3/dist-packages",
+        "/home/hzx/ROS_WS/arx_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/hzx/ROS_WS/mangdang_ws/devel/lib/python3/dist-packages",
+        "/home/hzx/ROS_WS/arx_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

@@ -37,7 +37,7 @@ if args.mode == 'mix' or args.mode == 'yourdata':
         test_dir = './dataset/test/'
     elif args.mode == 'yourdata':
         num_work = 1
-        test_set = TestDatasetFromFolder4('/home/omnisky/4t/RESIDE/RTTS/RTTS')#
+        test_set = TestDatasetFromFolder4('/home/hzx/Datasets/RTTS')#
         test_dataloader = DataLoader(dataset=test_set, num_workers=num_work, batch_size=1, shuffle=False, pin_memory=False)
         test_bar = tqdm(test_dataloader, desc='[testing datasets]')
 else:
@@ -71,6 +71,7 @@ start_time = time.time()
 tt = 0
 
 for image_name, input, target in test_bar:
+    torch.cuda.empty_cache()
     #print(input.size())
     #print(target.size())
     image_name = image_name[0]
@@ -127,5 +128,3 @@ test_ssim /= (test_ite)
 print('Test mPSNR: {:.4f}'.format(test_psnr))
 print('Test mSSIM: {:.4f}'.format(test_ssim))
 print('------------------------')
-
-

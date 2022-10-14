@@ -111,8 +111,8 @@ class TestDatasetFromFolder(Dataset):
     def __init__(self, dataset_dir):
         super(TestDatasetFromFolder, self).__init__()
         #self.h_path = dataset_dir + '/h'#'/hazy'
-        self.h_path = dataset_dir + '/JPEGImages_new'#'/hazy'  #hazy_new512
-        self.s_path = dataset_dir + '/JPEGImages_new'#'/clear'
+        self.h_path = dataset_dir + '/JPEGImages'#'/hazy'  #hazy_new512
+        self.s_path = dataset_dir + '/JPEGImages'#'/clear'
         #self.s_path = dataset_dir + '/t'#'/gt'
         self.h_filenames = [join(self.h_path, x) for x in natsort.natsorted(listdir(self.h_path)) if is_image_file(x)]
         self.s_filenames = [join(self.s_path, x) for x in natsort.natsorted(listdir(self.s_path)) if is_image_file(x)]
@@ -193,9 +193,9 @@ class TestDatasetFromFolder3(Dataset):
 class TestDatasetFromFolder4(Dataset):
     def __init__(self, dataset_dir):
         super(TestDatasetFromFolder4, self).__init__()
-        self.h_path = dataset_dir + '/JPEGImages_new' #S0501  JPEGImages_new
+        self.h_path = dataset_dir + '/JPEGImages' #S0501  JPEGImages_new
 
-        self.s_path = dataset_dir + '/JPEGImages_new'  # JPEGImages_new
+        self.s_path = dataset_dir + '/JPEGImages'  # JPEGImages_new
         self.h_filenames = [join(self.h_path, x) for x in natsort.natsorted(listdir(self.h_path)) if
                             is_image_file(x)]  # sorted
         self.s_filenames = [join(self.s_path, x) for x in natsort.natsorted(listdir(self.s_path)) if  #for p in range(10)
